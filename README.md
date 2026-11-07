@@ -38,6 +38,8 @@ El E2E usa un contenedor PostgreSQL efímero o `TEST_DATABASE_URL`, inicia el bi
 
 ## GitHub y SonarQube
 
+Para levantar la instancia local con Docker, seguir [esta guía](docs/sonarqube-docker.md).
+
 La CI exige `calidad`, `seguridad` e `imagen`. No se omite SonarQube si faltan sus secrets: calidad quedará bloqueado hasta configurar el proyecto. Ver `docs/solicitud-sonarqube.md`.
 
 Después del primer push, configurar protección de `main`: PR obligatorio, al menos una aprobación de otra persona y los tres checks requeridos. No habilitar bypass para integrar PR con fallas.
