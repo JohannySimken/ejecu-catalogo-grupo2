@@ -1,0 +1,18 @@
+packages:
+  - apps/web
+allowBuilds:
+  lefthook: set this to true or false
+catalog:
+  'react': 19.2.8
+  'react-dom': 19.2.8
+  'typescript': 6.0.3
+  'vite': 8.1.5
+  '@vitejs/plugin-react': 6.0.4
+  'vitest': 4.1.10
+  '@vitest/coverage-v8': 4.1.10
+  'openapi-typescript': 7.13.0
+  'oxlint': 1.75.0
+  'prettier': 3.9.6
+  'lefthook': 2.1.10
+  '@types/react': 19.2.14
+  '@types/react-dom': 19.2.3

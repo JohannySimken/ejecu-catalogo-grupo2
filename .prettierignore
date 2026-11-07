@@ -1,0 +1,12 @@
+pnpm-lock.yaml
+contracts/openapi.yaml
+docs/DAS.md
+**/dist
+**/coverage
+
+.tmp/
+node_modules/
+
+apps/api/e2e/testdata/*.golden.md
+
+apps/web/src/api/schema.d.ts

@@ -1,0 +1,25 @@
+{
+  "name": "ejecu-catalogo-grupo2",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": "22.22.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @grupo2/catalogo-ui dev",
+    "build": "pnpm --filter @grupo2/catalogo-ui build",
+    "lint": "oxlint --deny-warnings apps/web/src && node scripts/reglas.mjs",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm --filter @grupo2/catalogo-ui typecheck",
+    "test": "pnpm --filter @grupo2/catalogo-ui test",
+    "test:api": "cd apps/api && go test ./...",
+    "test:e2e:api": "node scripts/e2e.mjs",
+    "codegen": "node scripts/codegen.mjs",
+    "verify": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm test:api"
+  },
+  "devDependencies": {
+    "oxlint": "catalog:",
+    "prettier": "catalog:",
+    "lefthook": "catalog:"
+  }
+}

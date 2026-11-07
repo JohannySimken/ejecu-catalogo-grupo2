@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: true
+  commands:
+    formato:
+      run: pnpm format:check
+    lint:
+      run: pnpm lint
+    go:
+      run: node scripts/verificar-go.mjs
+    secretos:
+      run: gitleaks protect --staged --redact --no-banner
+pre-push:
+  commands:
+    verificar:
+      run: pnpm typecheck && pnpm test && pnpm test:api
