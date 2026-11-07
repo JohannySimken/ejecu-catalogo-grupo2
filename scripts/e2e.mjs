@@ -25,13 +25,13 @@ async function arrancar(entorno, db) {
     stdio: 'ignore',
   })
   for (let i = 0; i < 100; i++) {
-    if (proceso.exitCode !== null) throw new Error('La API terminÃƒÆ’Ã‚Â³ al iniciar')
+    if (proceso.exitCode !== null) throw new Error('La API terminó al iniciar')
     try {
       if ((await fetch('http://localhost:8080/healthz')).ok) return
     } catch {}
     await esperar(100)
   }
-  throw new Error('La API no iniciÃƒÆ’Ã‚Â³')
+  throw new Error('La API no inició')
 }
 async function detener() {
   if (!proceso || proceso.exitCode !== null) return
@@ -69,7 +69,7 @@ try {
       } catch {}
       await esperar(500)
     }
-    assert.ok(listo, 'PostgreSQL no iniciÃƒÆ’Ã‚Â³')
+    assert.ok(listo, 'PostgreSQL no inició')
   }
   await arrancar('test', db)
   const lineas = []
